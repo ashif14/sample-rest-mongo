@@ -1,0 +1,8 @@
+spring:
+  application:
+    name: ms-employee-service
+  profiles:
+    active: default
+  cloud:
+    config:
+      uri: localhost:8888

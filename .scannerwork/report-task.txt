@@ -1,0 +1,5 @@
+projectKey=spring-boot:sample-rest-mongo
+serverUrl=http://localhost:9000
+dashboardUrl=http://localhost:9000/dashboard/index/spring-boot:sample-rest-mongo
+ceTaskId=AVwcwBNJCdyNqRbFobNy
+ceTaskUrl=http://localhost:9000/api/ce/task?id=AVwcwBNJCdyNqRbFobNy

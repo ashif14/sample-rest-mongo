@@ -1,0 +1,11 @@
+Manifest-Version: 1.0
+Implementation-Title: Employee Rest Service Mongo Example
+Implementation-Version: 1.0
+Built-By: Administrator
+Implementation-Vendor-Id: com.tcs
+Build-Jdk: 1.8.0_151
+Implementation-URL: http://projects.spring.io/spring-boot/sample-rest-
+ mongo/
+Created-By: Maven Integration for Eclipse
+Implementation-Vendor: Pivotal Software, Inc.
+
