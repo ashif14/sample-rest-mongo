@@ -921,3 +921,7 @@ Update your application's configuration
 2017-11-09 12:18:29.403  INFO 8160 --- [http-nio-8089-exec-1] o.s.w.s.DispatcherServlet                : FrameworkServlet 'dispatcherServlet': initialization completed in 112 ms
 2017-11-09 12:18:29.494  INFO 8160 --- [http-nio-8089-exec-1] c.t.c.EmployeeController                 : This is an info message
 2017-11-09 12:18:29.631  INFO 8160 --- [http-nio-8089-exec-1] o.m.d.connection                         : Opened connection [connectionId{localValue:2, serverValue:4}] to localhost:27017
+2017-11-09 15:13:02.530  INFO 8160 --- [Thread-5] ationConfigEmbeddedWebApplicationContext : Closing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@5eba59c7: startup date [Thu Nov 09 12:16:58 IST 2017]; parent: org.springframework.context.annotation.AnnotationConfigApplicationContext@6d1427e5
+2017-11-09 15:13:02.542  INFO 8160 --- [Thread-5] o.s.j.e.a.AnnotationMBeanExporter        : Unregistering JMX-exposed beans on shutdown
+2017-11-09 15:13:02.544  INFO 8160 --- [Thread-5] o.s.j.e.a.AnnotationMBeanExporter        : Unregistering JMX-exposed beans
+2017-11-09 15:13:02.549  INFO 8160 --- [Thread-5] o.m.d.connection                         : Closed connection [connectionId{localValue:2, serverValue:4}] to localhost:27017 because the pool has been closed.
