@@ -40,13 +40,11 @@ public class EmployeeController{
 	 */
 	@RequestMapping( value = "/getEmployees", method=RequestMethod.GET )
 	public Map<String, Object> getEmployees(){
-        logger.info("This is an info message");
-		
 		List<Employee> employees = empRepo.findAll();
 		Map<String, Object> response = new LinkedHashMap<String, Object>();
 		response.put(SUCCESS, true);
 		response.put(RESPONSE_DATA, employees);
-	  
+	  	logger.info("Fetching Employee Details");
 		return response;
 	}
 	
@@ -65,10 +63,12 @@ public class EmployeeController{
 		if(emp != null ){
 			response.put(SUCCESS, true);
 			response.put(RESPONSE_DATA, emp);
+			logger.info("Employee Details: "+ response.toString());
 		} else{
 			response.put(SUCCESS , false);
 			response.put(RESPONSE_DATA, null);
 			response.put("msg","No Data found");
+			logger.info(response.toString());
 		}
 		
 		return response;
@@ -95,6 +95,7 @@ public class EmployeeController{
 		response.put(SUCCESS, true);
 		response.put(RESPONSE_DATA, newEmp);
 		empRepo.save(newEmp);
+		logger.info("Employee Successfully Created"+response.toString());
 		return response;
 	}
 	
@@ -155,10 +156,12 @@ public class EmployeeController{
 			response.put(SUCCESS, true);
 			response.put(RESPONSE_DATA, empObj);
 			response.put("msg", "Document Deleted with Id:"+id);
+			logger.info("Employee Record Successfully Deleted"+response.toString());
 		} else{
 			response.put(SUCCESS , false);
 			response.put(RESPONSE_DATA, null);
 			response.put("msg","No Data found to delete");
+			logger.info("Employee Record Not Found!! "+response.toString());
 		}
 		return response;
 	}
