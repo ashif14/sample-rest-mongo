@@ -1,5 +1,5 @@
 FROM java
-VOLUME /tmp
+VOLUME [ "/tmp" ]
 ADD sample-rest-mongo-1.0.jar app.jar
 RUN sh -c 'touch /app.jar'
 ENV JAVA_OPTS=""
