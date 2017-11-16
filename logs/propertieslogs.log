@@ -1310,3 +1310,73 @@ Caused by: java.net.ConnectException: Connection refused: connect
 2017-11-10 15:54:16.445  INFO 1400 --- [http-nio-8089-exec-1] c.t.c.EmployeeController                 : Fetching Employee Details
 2017-11-10 16:45:19.789  INFO 1400 --- [http-nio-8089-exec-3] c.t.c.EmployeeController                 : Employee Successfully Created{message=Employee Records Created, sucess=true, data=Customer[id= 5a058a47037b170578efcaa8, Name= Uttam, Stream= unix, c++, oracle, Experience= 1.3, Salary= 3.86]}
 2017-11-10 17:22:15.122  INFO 1400 --- [http-nio-8089-exec-5] c.t.c.EmployeeController                 : Fetching Employee Details
+2017-11-16 17:38:23.368  INFO 5156 --- [main] c.c.c.ConfigServicePropertySourceLocator : Fetching config from server at: http://localhost:8888
+2017-11-16 17:38:25.225  WARN 5156 --- [main] c.c.c.ConfigServicePropertySourceLocator : Could not locate PropertySource: I/O error on GET request for "http://localhost:8888/ms-employee-service/default": Connection refused: connect; nested exception is java.net.ConnectException: Connection refused: connect
+2017-11-16 17:38:25.230  INFO 5156 --- [main] c.t.Application                          : No active profile set, falling back to default profiles: default
+2017-11-16 17:38:25.274  INFO 5156 --- [main] ationConfigEmbeddedWebApplicationContext : Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@7f7ba084: startup date [Thu Nov 16 17:38:25 IST 2017]; parent: org.springframework.context.annotation.AnnotationConfigApplicationContext@2d03e0da
+2017-11-16 17:38:28.298  INFO 5156 --- [main] o.s.c.c.s.GenericScope                   : BeanFactory id=123473bf-70e9-35aa-86a1-a0d904e4c393
+2017-11-16 17:38:29.023  INFO 5156 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.cloud.autoconfigure.ConfigurationPropertiesRebinderAutoConfiguration' of type [class org.springframework.cloud.autoconfigure.ConfigurationPropertiesRebinderAutoConfiguration$$EnhancerBySpringCGLIB$$85f1a2d5] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2017-11-16 17:38:30.231  INFO 5156 --- [main] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat initialized with port(s): 8089 (http)
+2017-11-16 17:38:30.259  INFO 5156 --- [main] o.a.c.c.StandardService                  : Starting service Tomcat
+2017-11-16 17:38:30.268  INFO 5156 --- [main] o.a.c.c.StandardEngine                   : Starting Servlet Engine: Apache Tomcat/8.5.6
+2017-11-16 17:38:30.396  INFO 5156 --- [localhost-startStop-1] o.a.c.c.C.[.[.[/]                        : Initializing Spring embedded WebApplicationContext
+2017-11-16 17:38:30.400  INFO 5156 --- [localhost-startStop-1] o.s.w.c.ContextLoader                    : Root WebApplicationContext: initialization completed in 5126 ms
+2017-11-16 17:38:30.670  INFO 5156 --- [localhost-startStop-1] o.s.b.w.s.ServletRegistrationBean        : Mapping servlet: 'dispatcherServlet' to [/]
+2017-11-16 17:38:30.722  INFO 5156 --- [localhost-startStop-1] o.s.b.w.s.FilterRegistrationBean         : Mapping filter: 'characterEncodingFilter' to: [/*]
+2017-11-16 17:38:30.724  INFO 5156 --- [localhost-startStop-1] o.s.b.w.s.FilterRegistrationBean         : Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2017-11-16 17:38:30.725  INFO 5156 --- [localhost-startStop-1] o.s.b.w.s.FilterRegistrationBean         : Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2017-11-16 17:38:30.726  INFO 5156 --- [localhost-startStop-1] o.s.b.w.s.FilterRegistrationBean         : Mapping filter: 'requestContextFilter' to: [/*]
+2017-11-16 17:38:31.688  INFO 5156 --- [main] o.m.d.cluster                            : Cluster created with settings {hosts=[mongodb:27017], mode=MULTIPLE, requiredClusterType=UNKNOWN, serverSelectionTimeout='30000 ms', maxWaitQueueSize=500}
+2017-11-16 17:38:31.689  INFO 5156 --- [main] o.m.d.cluster                            : Adding discovered server mongodb:27017 to client view of cluster
+2017-11-16 17:38:33.466  INFO 5156 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/api/getEmployees],methods=[GET]}" onto public java.util.Map<java.lang.String, java.lang.Object> com.tcs.controller.EmployeeController.getEmployees()
+2017-11-16 17:38:33.486  INFO 5156 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/api/getEmployee/{employeeId}],methods=[GET]}" onto public java.util.Map<java.lang.String, java.lang.Object> com.tcs.controller.EmployeeController.getEmployee(java.lang.String)
+2017-11-16 17:38:33.683  INFO 5156 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/api/createEmployee],methods=[POST]}" onto public java.util.Map<java.lang.String, java.lang.Object> com.tcs.controller.EmployeeController.createEmployee(java.util.Map<java.lang.String, java.lang.Object>)
+2017-11-16 17:38:33.882  INFO 5156 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/api/updateEmployee/{employeeId}],methods=[PUT]}" onto public java.util.Map<java.lang.String, java.lang.Object> com.tcs.controller.EmployeeController.updateEmployee(java.util.Map<java.lang.String, java.lang.Object>,java.lang.String)
+2017-11-16 17:38:33.963  INFO 5156 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/api/deleteEmployee/{id}],methods=[DELETE]}" onto public java.util.Map<java.lang.String, java.lang.Object> com.tcs.controller.EmployeeController.deleteEmployee(java.lang.String)
+2017-11-16 17:38:33.972  INFO 5156 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/v2/api-docs],methods=[GET],produces=[application/json || application/hal+json]}" onto public org.springframework.http.ResponseEntity<springfox.documentation.spring.web.json.Json> springfox.documentation.swagger2.web.Swagger2Controller.getDocumentation(java.lang.String,javax.servlet.http.HttpServletRequest)
+2017-11-16 17:38:33.989  INFO 5156 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/swagger-resources/configuration/security]}" onto org.springframework.http.ResponseEntity<springfox.documentation.swagger.web.SecurityConfiguration> springfox.documentation.swagger.web.ApiResourceController.securityConfiguration()
+2017-11-16 17:38:33.993  INFO 5156 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/swagger-resources]}" onto org.springframework.http.ResponseEntity<java.util.List<springfox.documentation.swagger.web.SwaggerResource>> springfox.documentation.swagger.web.ApiResourceController.swaggerResources()
+2017-11-16 17:38:34.013  INFO 5156 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/swagger-resources/configuration/ui]}" onto org.springframework.http.ResponseEntity<springfox.documentation.swagger.web.UiConfiguration> springfox.documentation.swagger.web.ApiResourceController.uiConfiguration()
+2017-11-16 17:38:34.021  INFO 5156 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2017-11-16 17:38:34.026  INFO 5156 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2017-11-16 17:38:34.227  INFO 5156 --- [main] s.w.s.m.m.a.RequestMappingHandlerAdapter : Looking for @ControllerAdvice: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@7f7ba084: startup date [Thu Nov 16 17:38:25 IST 2017]; parent: org.springframework.context.annotation.AnnotationConfigApplicationContext@2d03e0da
+2017-11-16 17:38:34.448  INFO 5156 --- [main] o.s.w.s.h.SimpleUrlHandlerMapping        : Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2017-11-16 17:38:34.450  INFO 5156 --- [main] o.s.w.s.h.SimpleUrlHandlerMapping        : Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2017-11-16 17:38:34.516  INFO 5156 --- [main] o.s.w.s.h.SimpleUrlHandlerMapping        : Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2017-11-16 17:38:35.938  INFO 5156 --- [cluster-ClusterId{value='5a0d7fbfba86de142468e950', description='null'}-mongodb:27017] o.m.d.cluster                            : Exception in monitor thread while connecting to server mongodb:27017
+
+com.mongodb.MongoSocketException: mongodb
+	at com.mongodb.ServerAddress.getSocketAddress(ServerAddress.java:188) ~[mongo-java-driver-3.2.2.jar:?]
+	at com.mongodb.connection.SocketStreamHelper.initialize(SocketStreamHelper.java:50) ~[mongo-java-driver-3.2.2.jar:?]
+	at com.mongodb.connection.SocketStream.open(SocketStream.java:58) ~[mongo-java-driver-3.2.2.jar:?]
+	at com.mongodb.connection.InternalStreamConnection.open(InternalStreamConnection.java:114) ~[mongo-java-driver-3.2.2.jar:?]
+	at com.mongodb.connection.DefaultServerMonitor$ServerMonitorRunnable.run(DefaultServerMonitor.java:128) [mongo-java-driver-3.2.2.jar:?]
+	at java.lang.Thread.run(Thread.java:745) [?:1.8.0_121]
+Caused by: java.net.UnknownHostException: mongodb
+	at java.net.Inet6AddressImpl.lookupAllHostAddr(Native Method) ~[?:1.8.0_121]
+	at java.net.InetAddress$2.lookupAllHostAddr(InetAddress.java:928) ~[?:1.8.0_121]
+	at java.net.InetAddress.getAddressesFromNameService(InetAddress.java:1323) ~[?:1.8.0_121]
+	at java.net.InetAddress.getAllByName0(InetAddress.java:1276) ~[?:1.8.0_121]
+	at java.net.InetAddress.getAllByName(InetAddress.java:1192) ~[?:1.8.0_121]
+	at java.net.InetAddress.getAllByName(InetAddress.java:1126) ~[?:1.8.0_121]
+	at java.net.InetAddress.getByName(InetAddress.java:1076) ~[?:1.8.0_121]
+	at com.mongodb.ServerAddress.getSocketAddress(ServerAddress.java:186) ~[mongo-java-driver-3.2.2.jar:?]
+	... 5 more
+
+2017-11-16 17:38:36.438  INFO 5156 --- [main] o.s.j.e.a.AnnotationMBeanExporter        : Registering beans for JMX exposure on startup
+2017-11-16 17:38:36.487  INFO 5156 --- [main] o.s.j.e.a.AnnotationMBeanExporter        : Bean with name 'configurationPropertiesRebinder' has been autodetected for JMX exposure
+2017-11-16 17:38:36.489  INFO 5156 --- [main] o.s.j.e.a.AnnotationMBeanExporter        : Bean with name 'environmentManager' has been autodetected for JMX exposure
+2017-11-16 17:38:36.491  INFO 5156 --- [main] o.s.j.e.a.AnnotationMBeanExporter        : Bean with name 'refreshScope' has been autodetected for JMX exposure
+2017-11-16 17:38:36.514  INFO 5156 --- [main] o.s.j.e.a.AnnotationMBeanExporter        : Located managed bean 'environmentManager': registering with JMX server as MBean [org.springframework.cloud.context.environment:name=environmentManager,type=EnvironmentManager]
+2017-11-16 17:38:36.543  INFO 5156 --- [main] o.s.j.e.a.AnnotationMBeanExporter        : Located managed bean 'refreshScope': registering with JMX server as MBean [org.springframework.cloud.context.scope.refresh:name=refreshScope,type=RefreshScope]
+2017-11-16 17:38:36.563  INFO 5156 --- [main] o.s.j.e.a.AnnotationMBeanExporter        : Located managed bean 'configurationPropertiesRebinder': registering with JMX server as MBean [org.springframework.cloud.context.properties:name=configurationPropertiesRebinder,context=7f7ba084,type=ConfigurationPropertiesRebinder]
+2017-11-16 17:38:36.683  INFO 5156 --- [main] o.s.c.s.DefaultLifecycleProcessor        : Starting beans in phase 2147483647
+2017-11-16 17:38:36.684  INFO 5156 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Context refreshed
+2017-11-16 17:38:36.724  INFO 5156 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Found 1 custom documentation plugin(s)
+2017-11-16 17:38:36.750  INFO 5156 --- [main] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
+2017-11-16 17:38:37.479  INFO 5156 --- [main] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat started on port(s): 8089 (http)
+2017-11-16 17:38:37.488  INFO 5156 --- [main] c.t.Application                          : Started Application in 19.407 seconds (JVM running for 31.992)
+2017-11-16 17:39:08.895  INFO 5156 --- [http-nio-8089-exec-1] o.a.c.c.C.[.[.[/]                        : Initializing Spring FrameworkServlet 'dispatcherServlet'
+2017-11-16 17:39:08.941  INFO 5156 --- [http-nio-8089-exec-1] o.s.w.s.DispatcherServlet                : FrameworkServlet 'dispatcherServlet': initialization started
+2017-11-16 17:39:09.029  INFO 5156 --- [http-nio-8089-exec-1] o.s.w.s.DispatcherServlet                : FrameworkServlet 'dispatcherServlet': initialization completed in 87 ms
+2017-11-16 18:13:53.472  INFO 5156 --- [Thread-5] ationConfigEmbeddedWebApplicationContext : Closing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@7f7ba084: startup date [Thu Nov 16 17:38:25 IST 2017]; parent: org.springframework.context.annotation.AnnotationConfigApplicationContext@2d03e0da

@@ -1,0 +1,19 @@
+version: '3.2'
+
+services: 
+  sample-rest-mongo:
+    image: ashif14/sample-rest-mongo
+    container_name: sample-rest-mongo
+    ports: 
+      - 8089:8089
+    volumes:
+      - type: volume
+        source: springboot_logs
+        target: /logs
+    networks: 
+      - mongodb_mongo_net
+volumes:
+  springboot_logs:
+networks: 
+  mongodb_mongo_net:
+    external: true
