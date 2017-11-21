@@ -1,6 +1,8 @@
 version: '3.2'
 
 services: 
+  # mongodb:
+  #   image: 
   sample-rest-mongo:
     image: ashif14/sample-rest-mongo
     container_name: sample-rest-mongo
