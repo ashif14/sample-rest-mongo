@@ -1,13 +1,7 @@
 version: '3.2'
 
 services: 
-<<<<<<< HEAD
-  # mongodb:
-  #   image: 
-  sample-rest-mongo:
-=======
   springboot-rest-mongo:
->>>>>>> 92a22a594c8cf23abc7f3539b6d352ebf0d2b4b4
     image: ashif14/sample-rest-mongo
     container_name: springboot-rest-mongo
     # environment: 
