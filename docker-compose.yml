@@ -1,19 +1,27 @@
 version: '3.2'
 
 services: 
-  sample-rest-mongo:
+  springboot-rest-mongo:
     image: ashif14/sample-rest-mongo
-    container_name: sample-rest-mongo
+    container_name: springboot-rest-mongo
+    # environment: 
+      # - MONGO_HOST=mongodb-master
+      # - MONGO_PORT=27017
+      # - MONGO_DB=ecommerce
+      # - APP_PORT=8089
     ports: 
-      - 8089:8089
+      - 8080
     volumes:
       - type: volume
-        source: springboot_logs
+        source: logs
         target: /logs
     networks: 
       - mongodb_mongo_net
+      - replicaset_mongo_net
 volumes:
-  springboot_logs:
+  logs:
 networks: 
   mongodb_mongo_net:
+    external: true
+  replicaset_mongo_net:
     external: true
