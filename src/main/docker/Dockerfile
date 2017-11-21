@@ -5,7 +5,7 @@ RUN sh -c 'touch /app.jar'
 
 ENV JAVA_OPTS=""
 
-ENV MONGO_HOST="mongodb-master"
+ENV MONGO_HOST="mongodb"
 ENV MONGO_PORT="27017"
 ENV MONGO_DB="ecommerce"
 ENV APP_PORT="8080"
