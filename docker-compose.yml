@@ -16,12 +16,12 @@ services:
         source: logs
         target: /logs
     networks: 
-      # - mongodb_mongo_net
-      - replicaset_mongo_net
+      - mongodb_mongo_net
+      # - replicaset_mongo_net
 volumes:
   logs:
 networks: 
-  # mongodb_mongo_net:
-  #   external: true
-  replicaset_mongo_net:
+  mongodb_mongo_net:
     external: true
+  # replicaset_mongo_net:
+  #   external: true
