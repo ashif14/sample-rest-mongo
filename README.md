@@ -13,7 +13,8 @@ This is a sample appliction for springboot api with Mongodb
     ```
     mongod --dbpath data_directory_path
     ```
-3.  go to cmd and run 
+3.  Change your MongoDb configuration in src/java/resource/application.properties
+4.  Go to CMD and run 
     
     ```
     mvn spring-boot:run
