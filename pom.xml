@@ -4,7 +4,7 @@
 	<modelVersion>4.0.0</modelVersion>
 
 	<groupId>com.tcs</groupId>
-	<artifactId>sample-rest-mongo</artifactId>
+	<artifactId>springboot-rest-mongo</artifactId>
 	<name>Employee Rest Service Mongo Example</name>
 	<version>1.0</version>
 
