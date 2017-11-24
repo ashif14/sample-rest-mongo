@@ -1,6 +1,6 @@
-package com.tcs.controller;
+package com.app.controller;
 
-import com.tcs.repository.EmployeeRepository;
+import com.app.repository.EmployeeRepository;
 
 import java.util.List;
 import java.util.Map;
@@ -13,7 +13,7 @@ import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestBody;
 
-import com.tcs.model.Employee;
+import com.app.model.Employee;
 
  
 import org.apache.logging.log4j.LogManager;

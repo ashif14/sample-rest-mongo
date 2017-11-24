@@ -1,8 +1,11 @@
 spring:
   application:
-    name: ms-employee-service
-#  profiles:
-#    active: default
-#  cloud:
-#    config:
-#      uri: localhost:8888
+    name: springboot-rest-mongo
+  profiles:
+    active: docker
+  cloud:
+    config:
+      uri: http://localhost:8888
+management:
+  security:
+    enabled: false
