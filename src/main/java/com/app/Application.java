@@ -1,10 +1,13 @@
-package com.tcs;
+package com.app;
 
 
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.cloud.context.config.annotation.RefreshScope;
 import org.springframework.context.annotation.Bean;
-
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
 import springfox.documentation.builders.PathSelectors;
 import springfox.documentation.builders.RequestHandlerSelectors;
 import springfox.documentation.spi.DocumentationType;
@@ -23,6 +26,19 @@ public class Application {
 	
 	public static void main(String[] args) throws Exception{
 		SpringApplication.run(Application.class, args);
+	}
+
+	@RefreshScope
+	@RestController
+	class MessageRestController {
+	
+		@Value("${message:Hello default}")
+		private String message;
+	
+		@RequestMapping("/message")
+		String getMessage() {
+			return this.message;
+		}
 	}
 
 	@Bean

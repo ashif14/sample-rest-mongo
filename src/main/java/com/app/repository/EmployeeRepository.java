@@ -1,6 +1,6 @@
-package com.tcs.repository;
+package com.app.repository;
 
-import com.tcs.model.Employee;
+import com.app.model.Employee;
 
 import org.springframework.data.mongodb.repository.MongoRepository;
 
