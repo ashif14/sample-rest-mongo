@@ -1,5 +1,13 @@
 # Springboot CRUD Rest Api with MongoDB
-This is a sample appliction for springboot api with Mongodb
+This is a sample appliction for springboot employee management api with Mongodb
+Following Methods available:
+1.  GET /api/getEmployees -  Get all employee details
+2.  GET /api/getEmployee/{employee_id} - Get specific employee detail.
+3.  POST /api/createEmployee with data - Add New Employee to MongoDB
+4.  PUT /api/updateEmployee/{employee_id} with data- Update existing employee
+5.  DELETE /api/deleteEmployee/{employee_id} - Remove employee details from MongoDB.
+
+This sample also integrates Swagger-UI at http://host:port/swagger-ui.html
 
 
 # Prequisites
