@@ -2,7 +2,7 @@ spring:
   application:
     name: springboot-rest-mongo
   profiles:
-    active: docker
+    active: ${profile:docker}
   cloud:
     config:
       uri: http://localhost:8888

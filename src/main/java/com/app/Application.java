@@ -15,15 +15,15 @@ import springfox.documentation.spring.web.plugins.Docket;
 import springfox.documentation.swagger2.annotations.EnableSwagger2;
 
 /**
- * 
- * @author Administrator
+ *
+ * @author Mohd Ashif Ali
  *
  */
 @SpringBootApplication
 @EnableSwagger2
 public class Application {
-	
-	
+
+
 	public static void main(String[] args) throws Exception{
 		SpringApplication.run(Application.class, args);
 	}
@@ -31,10 +31,10 @@ public class Application {
 	@RefreshScope
 	@RestController
 	class MessageRestController {
-	
+
 		@Value("${message:Hello default}")
 		private String message;
-	
+
 		@RequestMapping("/message")
 		String getMessage() {
 			return this.message;
@@ -42,12 +42,11 @@ public class Application {
 	}
 
 	@Bean
-    public Docket productApi() {
+    public Docket employeesApi() {
         return new Docket(DocumentationType.SWAGGER_2)
-				.select()                
-				.apis(RequestHandlerSelectors.basePackage("com.tcs.controller"))
+				.select()
+				.apis(RequestHandlerSelectors.basePackage("com.app.controller"))
                 .paths(PathSelectors.any())
                 .build();
     }
 }
-
